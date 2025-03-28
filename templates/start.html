@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registration</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Login</h1>
+    <form action="/" method="POST">
+        <div class="form-group">
+            <label for="email">Enter Email ID</label>
+            <input type="email" name="email" id="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Enter Password</label>
+            <input type="password" name="password" id="password" required>
+        </div>
+
+        <button type="submit" class="btn">Log In</button>
+
+        <a href="/register" class="register-link">Not registered? Sign up here</a>
+    </form>
+    
+    {% if message %}
+        <div class="error">{{ message }}</div>
+    {% elif success%}
+        <div class="error-message">{{ success }}</div>
+    {% endif %}
+    
+</div>
+
+</body>
+</html>
